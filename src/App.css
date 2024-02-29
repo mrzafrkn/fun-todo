@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 body{
     margin:0;
     padding: 0;
+    background: #f4f1de;
+    font-family: 'Poppins, sans-serif';
 }
+
+header {
+    background: rgba(0,0,0,0.2);
+    width: 100%;
+    text-align: center;
+    color: #e07a5f;
+    font-family: 'Poppins', sans-serif;
+}
+
 .app {
     height: 100%;
     /* background: linear-gradient(180deg, rgba(255,255,255,1) 35%, rgba(133,172,236,1) 74%) ; */
-    background: radial-gradient(circle, rgba(255,255,255,1) 35%, rgba(133,172,236,1) 74%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,8 +27,51 @@ body{
     flex-direction: column;
 }
 
+.importance {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px 0 20px;
+    padding:0;
+  }
+
+ .importance li {
+    position:relative;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    list-style: none;
+    width:100px;
+    height:30px;
+    transition: all .3s;
+ }
+ [type='radio'] {
+    opacity: 0;
+}
+ 
+ .importance li label{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+ }
+
+ .importance li:nth-child(1) label{
+    top: 90%;
+    left: 50%;
+}
+.importance li:nth-child(2) label{
+    top: 90%;
+    left: 42%;
+}
+.importance li:nth-child(3) label{
+    top: 90%;
+    left: 50%;
+}
+
 button {
-    background: linear-gradient(0deg, rgba(36,55,44,1) 35%, rgba(93,209,238,1) 100%);
+    background: #81b29a;
     color: #fff;
     width:100px;
     height: 30px;
@@ -31,4 +85,73 @@ input {
     margin-top: 20px;
     font-size: 18px;
     width:300px;
+}
+
+.card {
+    position: relative;
+    font-size: 20px;
+    border:1px solid lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    margin:10px;
+    box-shadow: 0px 3px 4px lightgray;
+    width:700px;
+    text-align: center;
+}
+
+.card i {
+    position: absolute;
+    top:-10px;
+    left: -10px;
+    color:#8f5d5d;
+    background-color: #fff;
+    border: 2px solid black;
+    padding: 10px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.card i:hover{
+    color: red;
+}
+
+.fa-solid.fa-pen {
+    position: absolute;
+    top:-10px;
+    left: 50px;
+    color:#0d2950;
+    background-color: #fff;
+    border: 2px solid black;
+    padding: 10px 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.fa-solid.fa-pen:hover {
+    color:#1d59ac;
+}
+
+.task-level{
+    position: absolute;
+    font-size: 16px;
+    text-align: center;
+    width:55px;
+    height: 15px;
+    top:-5px;
+    left:93%;
+    border: 2px solid black;
+    padding: 10px 12px;
+    border-radius: 50px;
+}
+
+.new-task:hover{
+    cursor: pointer;
+    text-decoration: line-through;
+}
+
+.done-task {
+    
+    text-decoration: line-through;
 }
