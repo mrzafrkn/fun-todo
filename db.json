@@ -1,16 +1,3 @@
 {
-  "tasks": [
-    {
-      "taskText": "Selam",
-      "taskLevel": "Low",
-      "isDone": false,
-      "id": 1
-    },
-    {
-      "taskText": "Paramı geri istiyorum",
-      "taskLevel": "Low",
-      "isDone": true,
-      "id": 2
-    }
-  ]
+  "tasks": []
 }
